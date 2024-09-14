@@ -56,7 +56,7 @@ app.post('/user/sing-in', (request, response) => {
               const token = sign({
                 id: results[0].user_id,
                 email: results[0].email
-              }, "segredo", {expiresIn: "1de"});
+              }, "segredo", {expiresIn: "1d"});
 
               console.log(token)
 
