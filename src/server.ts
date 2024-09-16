@@ -43,8 +43,8 @@ app.post('/user/sing-in', (request, response) => {
         [email],
         (error: any, results: any, fildes: any) => {
           connection.release();
-          if (error) {
-            return response.status(500).json({error:"Erro ao conectar com o banco de dados"})
+          if (err) {
+            return response.status(500).json({err:"Erro ao conectar com o banco de dados"})
           }
 
           compare(password, results[0].password, (err, result) => {
