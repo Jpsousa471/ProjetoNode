@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'
 import { pool } from './mysql';
 import { v4 as uuidv4 } from 'uuid';
 import { hash, compare } from 'bcrypt';
